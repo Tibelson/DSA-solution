@@ -1,0 +1,27 @@
+if __name__ == '__main__':
+    N = int(input())
+    
+    new_list = []
+    for _ in range(N):
+        n = input().split()
+        
+        if n[0] == "insert":
+            i = int(n[1]) 
+            e = int(n[2])
+            new_list.insert(i,e)
+        elif n[0] == "print":
+            print(new_list)
+        elif n[0] == "remove":
+            e = int(n[1])
+            new_list.remove(e)
+        elif n[0] == "append":
+            e = int(n[1])
+            new_list.append(e)
+        elif n[0] == "sort":
+            new_list.sort()
+        elif n[0] == "pop":
+            new_list.pop()
+        elif n[0] =="reverse":
+            new_list.reverse()
+        else:
+            print("Enter valid arguement")
